@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Second Brain for Sales | CES 2026</title>
+    <!-- 引入 Tailwind CSS (快速开发版) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入 Google Fonts (Inter字体, 更有科技感) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #000000 0%, #044558 50%, #60A9B8 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+        p {
+            color: rgba(169, 173, 178, 1);
+        }
+        /* 玻璃拟态背景效果 */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        /* 渐变文字 */
+        .gradient-text {
+            background: linear-gradient(to right, #F6FDFF, #6BDFFF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="text-slate-50 antialiased selection:bg-blue-500 selection:text-white">
+
+    <!-- 1. 导航栏 -->
+    <nav class="fixed w-full z-50 top-0 left-0 border-b border-white/10 bg-0 backdrop-blur-md">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo区域 -->
+                <div class="flex-shrink-0 font-bold text-xl tracking-tighter">
+                    inko<span class="text-blue-400">.AI</span>
+                </div>
+                <!-- 顶部CTA -->
+                <div class="hidden md:block">
+                    <a href="#" onclick="handleJoinWaitlistClick(event)" class="text-sm font-semibold text-slate-300 hover:text-white transition">Join Waitlist</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. Hero Section (首屏核心区，桌面端两列布局) -->
+    <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 lg:min-h-screen overflow-hidden">
+        <!-- 背景光效 -->
+        <div class="absolute top-0 left-1/2 w-full -translate-x-1/2 h-full z-0 pointer-events-none">
+            <div class="absolute top-20 left-1/4 w-72 h-72 bg-blue-500/20 rounded-full blur-[100px]"></div>
+            <div class="absolute bottom-20 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-[100px]"></div>
+        </div>
+
+        <div class="relative z-10 max-w-6xl mx-auto px-4 lg:px-8">
+            <div class="lg:flex lg:items-center lg:gap-16">
+                <!-- 左侧：标题与文案 -->
+                <div class="text-center lg:text-left lg:w-7/12">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold uppercase tracking-wide mb-6">
+                        <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+                        Live at CES 2026
+                    </div>
+                    
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-tight">
+                        The <span class="gradient-text">Second Brain</span> for <br class="hidden md:block" />Sales Professionals.
+                    </h1>
+                    
+                    <p class="text-base md:text-lg lg:text-xl text-slate-400 mb-10 max-w-2xl mx-auto lg:mx-0">
+                        Turn every face-to-face conversation into a closed deal without taking a single note.
+                    </p>
+
+                    <!-- ConvertKit 表单嵌入 -->
+                    <div id="waitlist" class="max-w-md mx-auto lg:mx-0">
+                        <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
+                        <form action="https://app.kit.com/forms/8899105/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="8899105" data-uid="607eb344a1" data-format="inline" data-version="5" data-options="{&quot;settings&quot;:{&quot;after_subscribe&quot;:{&quot;action&quot;:&quot;message&quot;,&quot;success_message&quot;:&quot;Success! Now check your email to confirm your subscription.&quot;,&quot;redirect_url&quot;:&quot;&quot;},&quot;analytics&quot;:{&quot;google&quot;:null,&quot;fathom&quot;:null,&quot;facebook&quot;:null,&quot;segment&quot;:null,&quot;pinterest&quot;:null,&quot;sparkloop&quot;:null,&quot;googletagmanager&quot;:null},&quot;modal&quot;:{&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;powered_by&quot;:{&quot;show&quot;:true,&quot;url&quot;:&quot;https://kit.com/features/forms?utm_campaign=poweredby&amp;utm_content=form&amp;utm_medium=referral&amp;utm_source=dynamic&quot;},&quot;recaptcha&quot;:{&quot;enabled&quot;:false},&quot;return_visitor&quot;:{&quot;action&quot;:&quot;show&quot;,&quot;custom_content&quot;:&quot;&quot;},&quot;slide_in&quot;:{&quot;display_in&quot;:&quot;bottom_right&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;sticky_bar&quot;:{&quot;display_in&quot;:&quot;top&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15}},&quot;version&quot;:&quot;5&quot;}" min-width="400 500 600 700 800">
+                            <div data-style="clean">
+                                <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
+                                <div data-element="fields" data-stacked="false" class="seva-fields formkit-fields">
+                                    <div class="formkit-field">
+                                        <input class="formkit-input" name="email_address" aria-label="Email Address" placeholder="Email Address" required type="email">
+                                    </div>
+                                    <button data-element="submit" class="formkit-submit formkit-submit">
+                                        <div class="formkit-spinner"><div></div><div></div><div></div></div>
+                                        <span>Join Waitlist</span>
+                                    </button>
+                                </div>
+                                <div class="formkit-powered-by-convertkit-container">
+                                    <a href="https://kit.com/features/forms?utm_campaign=poweredby&amp;utm_content=form&amp;utm_medium=referral&amp;utm_source=dynamic" data-element="powered-by" class="formkit-powered-by-convertkit" data-variant="dark" target="_blank" rel="nofollow">Built with Kit</a>
+                                </div>
+                            </div>
+                            <style>
+                                .formkit-form[data-uid="607eb344a1"] *{box-sizing:border-box;}
+                                .formkit-form[data-uid="607eb344a1"]{max-width:700px;width:100%;}
+                                .formkit-form[data-uid="607eb344a1"] .formkit-input{width:100%;padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.04);color:#e5e7eb;}
+                                .formkit-form[data-uid="607eb344a1"] .formkit-input::placeholder{color:#94a3b8;}
+                                .formkit-form[data-uid="607eb344a1"] .formkit-submit{width:100%;border-radius:12px;background:linear-gradient(90deg,#2563eb,#7c3aed);color:#fff;font-weight:700;padding:12px;cursor:pointer;}
+                                .formkit-form[data-uid="607eb344a1"] .formkit-submit:hover{background:linear-gradient(90deg,#1d4ed8,#6d28d9);}
+                                .formkit-form[data-uid="607eb344a1"] .formkit-fields{display:flex;gap:10px;flex-wrap:wrap;}
+                                .formkit-form[data-uid="607eb344a1"] .formkit-field{flex:1 1 220px;}
+                                .formkit-form[data-uid="607eb344a1"] .formkit-powered-by-convertkit-container{display:none;}
+                                @media (max-width:640px){
+                                    .formkit-form[data-uid="607eb344a1"] .formkit-fields{flex-direction:column;}
+                                    .formkit-form[data-uid="607eb344a1"] .formkit-submit{width:100%;}
+                                }
+                            </style>
+                        </form>
+                    </div>
+                    <p class="mt-4 text-xs text-slate-500">Limited early access for CES attendees.</p>
+                </div>
+
+                <!-- 右侧：产品预览卡片（桌面端更突出） -->
+                <div class="mt-12 lg:mt-0 lg:w-5/12">
+                    <div class="glass-card rounded-3xl border border-white/10 shadow-2xl p-6 lg:p-8 relative overflow-hidden">
+                        <div class="absolute -top-20 -right-10 w-40 h-40 bg-blue-500/20 rounded-full blur-3xl"></div>
+                        <div class="absolute -bottom-24 -left-10 w-48 h-48 bg-purple-500/20 rounded-full blur-3xl"></div>
+                        <div class="relative">
+                            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400 mb-4">
+                                LIVE SALES COCKPIT
+                            </p>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-sm font-medium text-slate-200">Today’s Meeting</span>
+                                <span class="text-xs px-2 py-1 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/30">
+                                    Recording •
+                                </span>
+                            </div>
+                            <div class="space-y-3 mb-6">
+                                <div class="flex items-center justify-between text-xs text-slate-400">
+                                    <span>Client fit</span>
+                                    <span class="text-emerald-300 font-semibold">92%</span>
+                                </div>
+                                <div class="w-full h-2 rounded-full bg-slate-800 overflow-hidden">
+                                    <div class="h-full w-11/12 bg-gradient-to-r from-blue-500 to-emerald-400"></div>
+                                </div>
+                                <div class="flex items-center justify-between text-xs text-slate-400">
+                                    <span>Objections surfaced</span>
+                                    <span class="text-amber-300 font-semibold">3</span>
+                                </div>
+                            </div>
+                            <div class="bg-slate-900/60 rounded-2xl border border-white/5 p-4 space-y-3">
+                                <p class="text-xs text-slate-400 uppercase tracking-[0.16em]">Next Best Move</p>
+                                <p class="text-sm text-slate-100">
+                                    Reframe pricing around long-term risk reduction. Ask for examples of past claim delays that frustrated them.
+                                </p>
+                                <button class="mt-3 w-full text-xs font-semibold text-slate-900 bg-slate-100 hover:bg-white rounded-full py-2 transition">
+                                    Send follow-up email draft to my inbox
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. 产品展示占位 (Product Demo) -->
+    <section class="max-w-5xl mx-auto px-4 mb-24">
+        <div class="glass-card rounded-2xl aspect-[16/9] flex items-center justify-center relative overflow-hidden group">
+            <!-- 产品图片 -->
+            <img src="images/Frame 1321316729.jpg" alt="Product Visualization - Pen and Smartphone" class="w-full h-full object-contain">
+        </div>
+    </section>
+
+    <!-- 4. 三步流程 (How it works) -->
+    <section class="py-20">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Focus on the client. Not the notes.</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="p-8 rounded-2xl bg-slate-800/50 border border-white/5 hover:border-blue-500/30 transition duration-300">
+                    <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center text-blue-400 mb-6 text-2xl">🎙️</div>
+                    <h3 class="text-xl font-bold mb-2">1. Capture</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Record discreetly with our premium pen hardware. It looks like a normal pen, but hears everything.
+                    </p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="p-8 rounded-2xl bg-slate-800/50 border border-white/5 hover:border-purple-500/30 transition duration-300">
+                    <div class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center text-purple-400 mb-6 text-2xl">🧠</div>
+                    <h3 class="text-xl font-bold mb-2">2. Analyze</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        AI extracts client needs, pain points, and sentiments instantly. It builds a psychological profile.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="p-8 rounded-2xl bg-slate-800/50 border border-white/5 hover:border-green-500/30 transition duration-300">
+                    <div class="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center text-green-400 mb-6 text-2xl">📈</div>
+                    <h3 class="text-xl font-bold mb-2">3. Action</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Receive the "Next Best Move" and follow-up emails drafted directly on your phone app.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. 信任与场景 (Trust & Use Cases) -->
+    <section class="py-20 border-t border-white/5">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold mb-12 text-slate-300">Engineered for Professionals in</h2>
+            
+            <div class="flex flex-wrap justify-center gap-4 md:gap-12 opacity-70">
+                <span class="px-6 py-3 rounded-full border border-white/10 bg-white/5 font-semibold">🛡️ Insurance</span>
+                <span class="px-6 py-3 rounded-full border border-white/10 bg-white/5 font-semibold">🏠 Real Estate</span>
+                <span class="px-6 py-3 rounded-full border border-white/10 bg-white/5 font-semibold">💰 Wealth Mgmt</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 数据隐私模块 -->
+    <section class="max-w-5xl mx-auto px-4 mb-24">
+        <div class="glass-card rounded-2xl p-8 lg:p-10 border border-white/10 shadow-2xl">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-10 h-10 rounded-full bg-emerald-500/20 border border-emerald-400/30 flex items-center justify-center text-lg">🔒</div>
+                <div>
+                    <h3 class="text-2xl font-bold text-white">Your data. Yours alone.</h3>
+                    <p class="text-slate-400 text-sm">Local first · Controlled sync · Delete anytime</p>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="p-4 rounded-xl bg-slate-900/60 border border-white/5">
+                    <div class="flex items-center gap-3">
+                        <span class="text-lg">🔒</span>
+                        <div>
+                            <p class="text-white font-semibold">Local first</p>
+                            <p class="text-slate-400 text-sm">Audio stays on your device by default</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 rounded-xl bg-slate-900/60 border border-white/5">
+                    <div class="flex items-center gap-3">
+                        <span class="text-lg">🧠</span>
+                        <div>
+                            <p class="text-white font-semibold">No model training</p>
+                            <p class="text-slate-400 text-sm">Your content never goes into public models</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 rounded-xl bg-slate-900/60 border border-white/5">
+                    <div class="flex items-center gap-3">
+                        <span class="text-lg">☁️</span>
+                        <div>
+                            <p class="text-white font-semibold">Controlled sync</p>
+                            <p class="text-slate-400 text-sm">Cloud uploads are always your choice</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 rounded-xl bg-slate-900/60 border border-white/5">
+                    <div class="flex items-center gap-3">
+                        <span class="text-lg">🗑️</span>
+                        <div>
+                            <p class="text-white font-semibold">One-tap delete</p>
+                            <p class="text-slate-400 text-sm">Erase your data completely at any time</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Footer -->
+    <footer class="py-10 border-t border-white/10 text-center text-slate-600 text-sm">
+        <div class="flex flex-col items-center justify-center gap-4 text-slate-400">
+            <p class="flex flex-col md:flex-row items-center justify-center gap-3">
+                <span>&copy; 2026 inko.AI. All rights reserved.</span>
+                <span class="hidden md:inline text-slate-700">•</span>
+                <a href="privacy.html" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-white transition">Privacy Policy</a>
+                <span class="hidden md:inline text-slate-700">•</span>
+                <a href="terms.html" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-white transition">Terms of Service</a>
+            </p>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-3 text-sm">
+                <a href="mailto:vlee8890@gmail.com" class="text-slate-300 hover:text-white transition">Email: vlee8890@gmail.com</a>
+                <span class="hidden md:inline text-slate-700">•</span>
+                <a href="http://linkedin.com/in/victor-lee-ba83bb337" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-white transition">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast 提示 -->
+    <div id="toast" class="fixed top-20 left-1/2 -translate-x-1/2 z-50 opacity-0 pointer-events-none transition-all duration-300">
+        <div class="bg-blue-600 text-white px-6 py-4 rounded-lg shadow-2xl flex items-center gap-3 min-w-[300px]">
+            <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span class="text-sm font-medium">Please enter your email address in the input box</span>
+        </div>
+    </div>
+
+    <style>
+        #toast.show {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateX(-50%) translateY(0);
+        }
+        #toast {
+            transform: translateX(-50%) translateY(-20px);
+        }
+    </style>
+
+    <script>
+        function handleJoinWaitlistClick(e) {
+            e.preventDefault();
+            
+            // 滚动到页面顶部
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+            
+            // 显示 toast
+            const toast = document.getElementById('toast');
+            toast.classList.add('show');
+            
+            // 3秒后自动隐藏 toast
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+            
+            // 聚焦到邮箱输入框（如果存在）
+            setTimeout(() => {
+                const emailInput = document.querySelector('input[name="email_address"]');
+                if (emailInput) {
+                    emailInput.focus();
+                }
+            }, 500);
+        }
+    </script>
+
+</body>
+</html>
